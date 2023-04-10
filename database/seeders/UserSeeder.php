@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         $users = [
                 [
                     'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
@@ -55,7 +55,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
