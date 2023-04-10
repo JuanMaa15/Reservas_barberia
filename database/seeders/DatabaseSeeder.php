@@ -20,5 +20,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            HourSeeder::class,
+        ]);
+
+        //User::factory(1)->create();
+        
     }
 }

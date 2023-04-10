@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\HourAvaliableRequest;
 use App\Models\Hour;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
@@ -9,40 +10,16 @@ use Illuminate\Http\Request;
 class HourController extends Controller
 {
     //Mostrar horas disponibles
-    public function getAvailable(Request $request) {
+    public function getAvailable(HourAvaliableRequest $request) {
 
-        //Validar el formulario
-        $request->validate([
-            'fecha' => ['required', 'string'],
-            'barbero' => ['required', 'integer']
-        ]);
-
-        //Recoger datos
-        $fecha = $request->input('fecha');
-        $user_id = $request->input('barbero');
-        
         // Traer de la base de datos las reservas que cumplan con las condiciones
-        $reservations = Reservation::where('fecha', $fecha)
-                                ->where('user_id', $user_id)
+        $reservations = Reservation::where('fecha', $request->input('fecha'))
+                                ->where('user_id', $request->input('barbero'))
                                 ->get();
-
 
         //Traer listado de las horas
         $hours = Hour::all();
-
-        $html = "";
-        
-        
-        //Recoger las horas para verificar si ya estan reservadas
-        foreach($hours as $hour) {
-            
-            //Mostrar vista
-            echo view('hour.hourdate', ['hour' => $hour, 'reservations' => $reservations]);
-
-        }
-
-        // Retornar HTML
-        return $html;
+        return view('hour.hourdate',compact('hours','reservations'));
         
     }
 

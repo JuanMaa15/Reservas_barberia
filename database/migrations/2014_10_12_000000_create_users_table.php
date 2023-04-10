@@ -14,15 +14,15 @@ return new class extends Migration
      */
     public function up()
     {
-        /* Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        }); */
+        // Schema::create('users', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('nombre');
+        //     $table->string('email')->unique();
+        //     $table->timestamp('email_verified_at')->nullable();
+        //     $table->string('password');
+        //     $table->rememberToken();
+        // }); 
+
 
         DB::statement('
             CREATE TABLE users (
@@ -30,7 +30,7 @@ return new class extends Migration
                 nombre VARCHAR(255) NOT NULL,
                 apellido VARCHAR(255),
                 telefono VARCHAR(40),
-                correo VARCHAR(255) NOT NULL UNIQUE,
+                email VARCHAR(255) NOT NULL UNIQUE,
                 password VARCHAR(255) NOT NULL,
                 imagen VARCHAR(255),
                 created_at DATETIME,
