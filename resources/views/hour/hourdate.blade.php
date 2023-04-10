@@ -1,4 +1,9 @@
 {{-- Variable para validar creacion de un boton --}}
+
+@foreach($hours as $hour)
+
+
+
 <?php $crear = true; ?>
 
 {{-- Verificar si hay registros --}}
@@ -43,3 +48,4 @@
 
 @endif
 
+@endforeach

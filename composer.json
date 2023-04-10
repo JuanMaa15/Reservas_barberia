@@ -13,6 +13,7 @@
         "laraveles/spanish": "^1.5"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
         "fakerphp/faker": "^1.9.1",
         "laravel-lang/attributes": "1.1",
         "laravel-lang/lang": "10.9",

@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Storage;
 class UserController extends Controller
 {
     
-    public function __construct()
-    {
-        //Solo los usuarios que iniciaron sesión tendrán acceso a estas acciones
-        $this->middleware('auth')->only('index', 'edit', 'update', 'config', 'delete');
-    }
+    // public function __construct()
+    // {
+    //     //Solo los usuarios que iniciaron sesión tendrán acceso a estas acciones
+    //     $this->middleware('auth')->only('index', 'edit', 'update', 'config', 'delete');
+    // }
 
     public function index() {
         
@@ -32,7 +32,6 @@ class UserController extends Controller
     public function indexClient() {
 
         $users = User::All();
-
         return view('index', ['users' => $users]);
     }
 
