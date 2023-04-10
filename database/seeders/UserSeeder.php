@@ -16,14 +16,43 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $users = [
+        $users = 
+        [
+
                 [
                     'nombre'	     => fake()->name(),
                     'apellido'	     => fake()->lastName(),
                     'telefono'	     => fake()->phoneNumber(),
-                    'email'	     => fake()->unique()->safeEmail(),
+                    'email'	         => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                    'imagen'         => 'placeholder.png',
+                    'imagen'         => 'foto-perfil.jpg',
+                    'remember_token' => Str::random(10),
+                ],
+                [
+                    'nombre'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
+                    'telefono'	     => fake()->phoneNumber(),
+                    'email'	         => fake()->unique()->safeEmail(),
+                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+                    'imagen'         => 'foto-perfil.jpg',
+                    'remember_token' => Str::random(10),
+                ],
+                [
+                    'nombre'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
+                    'telefono'	     => fake()->phoneNumber(),
+                    'email'	         => fake()->unique()->safeEmail(),
+                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+                    'imagen'         => 'foto-perfil.jpg',
+                    'remember_token' => Str::random(10),
+                ],
+                [
+                    'nombre'	     => fake()->name(),
+                    'apellido'	     => fake()->lastName(),
+                    'telefono'	     => fake()->phoneNumber(),
+                    'email'	         => fake()->unique()->safeEmail(),
+                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+                    'imagen'         => 'foto-perfil.jpg',
                     'remember_token' => Str::random(10),
                 ],
                 [
@@ -32,38 +61,11 @@ class UserSeeder extends Seeder
                     'telefono'	     => fake()->phoneNumber(),
                     'email'	     => fake()->unique()->safeEmail(),
                     'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                    'imagen'         => 'placeholder.png',
-                    'remember_token' => Str::random(10),
-                ],
-                [
-                    'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->lastName(),
-                    'telefono'	     => fake()->phoneNumber(),
-                    'email'	     => fake()->unique()->safeEmail(),
-                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                    'imagen'         => 'placeholder.png',
-                    'remember_token' => Str::random(10),
-                ],
-                [
-                    'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->lastName(),
-                    'telefono'	     => fake()->phoneNumber(),
-                    'email'	     => fake()->unique()->safeEmail(),
-                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                    'imagen'         => 'placeholder.png',
-                    'remember_token' => Str::random(10),
-                ],
-                [
-                    'nombre'	     => fake()->name(),
-                    'apellido'	     => fake()->lastName(),
-                    'telefono'	     => fake()->phoneNumber(),
-                    'email'	     => fake()->unique()->safeEmail(),
-                    'password'	     => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                    'imagen'         => 'placeholder.png',
+                    'imagen'         => 'foto-perfil.jpg',
                     'remember_token' => Str::random(10),
                 ]
-            ];
+        ];
 
-            User::insert($users);
+        User::insert($users);
     }
 }
